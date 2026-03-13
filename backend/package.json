@@ -2,10 +2,10 @@
   "name": "harl-backend",
   "version": "1.0.0",
   "private": true,
-  "main": "dist/server.js",
+  "main": "dist/backend/src/server.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/server.js",
+    "start": "node dist/backend/src/server.js",
     "dev": "nodemon --watch src --exec ts-node src/server.ts"
   },
   "dependencies": {
