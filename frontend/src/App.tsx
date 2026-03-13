@@ -1,7 +1,9 @@
 import React, { Suspense } from "react";
 import { Layout } from "./common/components/Layout";
 import { LabProfileSection } from "./features/lab-profile/components/LabProfileSection";
+import { MissionSection } from "./features/mission/components/MissionSection";
 import { ProjectsSection } from "./features/projects/components/ProjectsSection";
+import { ResourcesSection } from "./features/resources/components/ResourcesSection";
 import { ContactForm } from "./features/contact/components/ContactForm";
 
 /**
@@ -12,7 +14,9 @@ const App: React.FC = () => {
     <Layout>
       <Suspense fallback={<p className="text-sm text-slate-400">Loading…</p>}>
         <LabProfileSection />
+        <MissionSection />
         <ProjectsSection />
+        <ResourcesSection />
         <ContactForm />
       </Suspense>
     </Layout>

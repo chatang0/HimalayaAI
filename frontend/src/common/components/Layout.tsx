@@ -9,13 +9,13 @@ interface LayoutProps {
 }
 
 /**
- * Page layout with shared header and footer.
+ * Simple centered layout with clean dark background.
  */
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col bg-slate-950 text-slate-50">
+    <div className="min-h-screen bg-slate-900 text-slate-50 flex flex-col">
       <Header />
-      <main className="flex-1 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto py-8">{children}</main>
+      <main className="flex-1">{children}</main>
       <Footer />
     </div>
   );

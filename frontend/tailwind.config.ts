@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 
 /**
  * Tailwind CSS configuration for the HARL frontend.
+ * Uses a calm, modern dark theme suitable for a research lab site.
  */
 const config: Config = {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
@@ -9,10 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#2563EB",
-          dark: "#1D4ED8"
+          DEFAULT: "#3b82f6",
+          dark: "#1d4ed8"
         },
-        accent: "#F97316"
+        accent: "#22c55e"
+      },
+      fontFamily: {
+        sans: ["system-ui", "ui-sans-serif", "Inter", "sans-serif"]
       }
     }
   },

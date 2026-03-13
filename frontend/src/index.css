@@ -5,9 +5,17 @@
 /* Global site-specific styles. */
 body {
   @apply bg-slate-950 text-slate-50 antialiased;
+  font-family: theme("fontFamily.sans");
 }
 
 a {
   @apply text-primary hover:text-primary-dark transition-colors;
 }
 
+.section {
+  @apply w-full py-10 sm:py-14 lg:py-16;
+}
+
+.section-inner {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
