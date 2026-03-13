@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global site-specific styles. */
+body {
+  @apply bg-slate-950 text-slate-50 antialiased;
+}
+
+a {
+  @apply text-primary hover:text-primary-dark transition-colors;
+}
+
