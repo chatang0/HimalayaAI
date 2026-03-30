@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
         <p>© {new Date().getFullYear()} Himalaya AI Research Lab. All rights reserved.</p>
         <div className="flex flex-wrap gap-4">
           <a
-            href="https://github.com/HimalayaAI"
+            href="https://github.com/HimalayaGPT"
             target="_blank"
             rel="noreferrer"
             className="hover:text-orange-400 transition-colors"
@@ -25,6 +25,7 @@ export const Footer: React.FC = () => {
           >
             X (Twitter)
           </a>
+
           <a
             href="https://huggingface.co/himalaya-ai"
             target="_blank"

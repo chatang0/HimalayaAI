@@ -9,7 +9,7 @@ export const ProjectsSection: React.FC = () => {
   const { projects, loading, error } = useProjects();
 
   return (
-    <section id="projects" className="section bg-slate-950/70">
+    <section id="projects" className="section bg-transparent relative">
       <div className="section-inner space-y-8">
         <div className="space-y-3">
           <div className="flex items-center gap-3">
@@ -27,7 +27,8 @@ export const ProjectsSection: React.FC = () => {
             matures.
           </p>
         </div>
-        {loading && <p className="text-sm text-slate-400">Loading projects…</p>}
+        {/* Loading projects hidden per user request */}
+
         {error && !loading && (
           <p className="text-sm text-red-400">Failed to load projects: {error}</p>
         )}
@@ -36,7 +37,7 @@ export const ProjectsSection: React.FC = () => {
             {projects.map((project) => (
               <Card
                 key={project.slug}
-                className="h-full p-6 flex flex-col gap-4 border-slate-800 bg-slate-950/80 hover:border-orange-500/70 hover:shadow-xl hover:shadow-slate-950/40 transition-colors"
+                className="h-full p-6 flex flex-col gap-4 border-slate-800/40 bg-slate-950/20 backdrop-blur-md hover:border-orange-500/70 hover:shadow-xl hover:shadow-slate-950/40 transition-colors"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="space-y-1.5">

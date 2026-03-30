@@ -1,6 +1,7 @@
 import React from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { GlobeBackground } from "./GlobeBackground";
 
 /** Props for the `Layout` component. */
 interface LayoutProps {
@@ -9,13 +10,14 @@ interface LayoutProps {
 }
 
 /**
- * Simple centered layout with clean dark background.
+ * Centered layout with interactive 3D globe background.
  */
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-50 flex flex-col">
+    <div className="min-h-screen bg-transparent text-slate-50 flex flex-col relative overflow-x-hidden">
+      <GlobeBackground />
       <Header />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 z-10">{children}</main>
       <Footer />
     </div>
   );

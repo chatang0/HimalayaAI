@@ -10,15 +10,14 @@ export class GetLabProfileUseCase {
   async execute(): Promise<LabProfileEntity> {
     return {
       name: "Himalaya AI Research Lab (HARL)",
-      tagline: "Working towards a 1T-token Nepali Devanagari corpus.",
+      tagline: "Building AI That Speaks Nepali",
       mission:
-        "Himalaya AI Research Lab is an early-stage, open initiative focused on building a high-quality " +
-        "Nepali Devanagari text dataset at the 1 trillion token scale. Our current work is centered on " +
-        "corpus collection, cleaning, and documentation so that future Nepali large language models (LLMs) " +
-        "and tools can be trained on transparent, locally grounded data.",
-      githubUrl: "https://github.com/HimalayaAI",
+        "Building a foundation AI model called HimalayaGPT that fully understands and generates the Nepali language fluently. " +
+        "We are dedicated to building Sovereign AI infrastructure for Nepal through datasets, models, and community-driven research.",
+      githubUrl: "https://github.com/HimalayaGPT",
       xUrl: "https://x.com/HimalayaAILab",
       huggingFaceUrl: "https://huggingface.co/himalaya-ai"
+
     };
   }
 }

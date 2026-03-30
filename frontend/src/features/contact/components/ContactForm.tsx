@@ -8,7 +8,7 @@ export const ContactForm: React.FC = () => {
   const { values, submitting, error, success, updateField, handleSubmit } = useContactForm();
 
   return (
-    <section id="contact" className="section bg-slate-950">
+    <section id="contact" className="section bg-transparent relative">
       <div className="section-inner">
         <div className="grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1.6fr)] items-start">
           <div className="space-y-4">
@@ -28,7 +28,7 @@ export const ContactForm: React.FC = () => {
           </div>
 
           <form
-            className="grid gap-4 rounded-2xl border border-slate-800 bg-slate-950/80 px-4 sm:px-6 py-5 sm:py-6 shadow-xl shadow-slate-950/40"
+            className="grid gap-4 rounded-2xl border border-slate-800/40 bg-slate-950/20 backdrop-blur-md px-4 sm:px-6 py-5 sm:py-6 shadow-xl shadow-slate-950/40"
             onSubmit={(event) => {
               event.preventDefault();
               void handleSubmit();
@@ -39,7 +39,7 @@ export const ContactForm: React.FC = () => {
                 Name
                 <input
                   type="text"
-                  className="rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 focus:border-orange-500 focus:outline-none"
+                  className="rounded-md border border-slate-700/50 bg-slate-900/30 px-3 py-2 text-sm text-slate-100 focus:border-orange-500/80 focus:outline-none backdrop-blur-sm"
                   value={values.name}
                   onChange={(event) => updateField("name", event.target.value)}
                 />
@@ -57,7 +57,7 @@ export const ContactForm: React.FC = () => {
             <label className="flex flex-col gap-1 text-xs text-slate-300">
               Message
               <textarea
-                className="rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 focus:border-orange-500 focus:outline-none min-h-[120px] leading-relaxed"
+                className="rounded-md border border-slate-700/50 bg-slate-900/30 px-3 py-2 text-sm text-slate-100 focus:border-orange-500/80 focus:outline-none min-h-[120px] leading-relaxed backdrop-blur-sm"
                 value={values.message}
                 onChange={(event) => updateField("message", event.target.value)}
               />

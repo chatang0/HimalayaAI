@@ -14,7 +14,7 @@ export const Hero: React.FC<HeroProps> = ({ profile }) => {
   return (
     <section
       id="hero"
-      className="section bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 relative overflow-hidden"
+      className="section bg-transparent relative overflow-hidden"
     >
       <div className="pointer-events-none absolute inset-0 opacity-60">
         <svg
@@ -89,7 +89,7 @@ export const Hero: React.FC<HeroProps> = ({ profile }) => {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-slate-800/80 bg-slate-900/80 backdrop-blur-sm p-6 sm:p-8 space-y-5 shadow-xl shadow-slate-950/40">
+          <div className="rounded-2xl border border-slate-800/40 bg-slate-950/20 backdrop-blur-md p-6 sm:p-8 space-y-5 shadow-xl shadow-slate-950/40">
             <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
               Current focus
             </p>
@@ -99,7 +99,7 @@ export const Hero: React.FC<HeroProps> = ({ profile }) => {
               language models on this corpus once it is mature and well-documented.
             </p>
             <div className="grid grid-cols-2 gap-4 text-xs sm:text-sm text-slate-200">
-              <div className="rounded-lg border border-slate-800 bg-slate-950/70 p-3 sm:p-4 space-y-1.5">
+              <div className="rounded-lg border border-slate-800/40 bg-slate-950/10 p-3 sm:p-4 space-y-1.5">
                 <p className="text-[11px] uppercase tracking-wide text-slate-400">Domains</p>
                 <p className="leading-relaxed">Corpus, tokenization, LLMs, evaluation</p>
               </div>

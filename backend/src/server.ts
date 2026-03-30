@@ -2,16 +2,17 @@ import express from "express";
 import cors from "cors";
 import { json } from "express";
 import { config } from "./config";
-import { connectMongo } from "./infrastructure/database/connectMongo";
 import { apiRouter } from "./presentation/routers";
+import { connectMongo } from "./infrastructure/database/connectMongo";
 
 /**
  * Creates and configures the Express application.
  */
 async function createApp() {
-  await connectMongo();
-
   const app = express();
+  
+  // Connect to MongoDB
+  await connectMongo();
 
   app.use(
     cors({

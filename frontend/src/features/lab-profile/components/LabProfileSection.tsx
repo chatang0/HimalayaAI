@@ -11,10 +11,11 @@ export const LabProfileSection: React.FC = () => {
   if (loading) {
     return (
       <section id="hero" className="py-10">
-        <p className="text-sm text-slate-400">Loading lab profile…</p>
+        {/* Loading state hidden per user request */}
       </section>
     );
   }
+
 
   if (error || !profile) {
     return (

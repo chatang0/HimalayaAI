@@ -7,32 +7,33 @@ export const ResourcesSection: React.FC = () => {
   const resources = [
     {
       title: "GitHub organization",
-      description: "Follow the corpus-building work, data scripts, and early utilities.",
-      href: "https://github.com/HimalayaAI",
+      description: "Follow our pre-training scripts, tokenization research, and data pipelines.",
+      href: "https://github.com/HimalayaGPT",
       label: "Open on GitHub"
     },
     {
       title: "HuggingFace hub",
-      description: "A home for future Nepali models and dataset releases as they become ready.",
+      description: "The official home for HimalayaGPT model weights and the 1T-token Nepali corpus.",
       href: "https://huggingface.co/himalaya-ai",
       label: "View on HuggingFace"
     },
     {
-      title: "Research updates",
-      description: "Follow along as we share milestones and early findings.",
-      href: "https://x.com/HimalayaAILab",
-      label: "Follow on X"
+      title: "Government & AI Partnership",
+      description: "Collaborating with MoEST and national bodies on Sovereign AI and digital sovereignty.",
+      href: "#contact",
+      label: "Partner with us"
     },
     {
-      title: "Collaborations",
-      description: "Universities, labs, and organizations interested in Nepali LLMs and data.",
+      title: "Compute Sponsorship",
+      description: "We are seeking GPU clusters and international grants to train Nepali models from scratch.",
       href: "#contact",
-      label: "Start a conversation"
+      label: "Sponsor compute"
     }
+
   ];
 
   return (
-    <section className="section bg-slate-900">
+    <section className="section bg-transparent relative">
       <div className="section-inner space-y-8">
         <div className="space-y-3">
           <div className="flex items-center gap-3">
@@ -57,11 +58,11 @@ export const ResourcesSection: React.FC = () => {
               href={resource.href}
               target={resource.href.startsWith("#") ? undefined : "_blank"}
               rel={resource.href.startsWith("#") ? undefined : "noreferrer"}
-              className="group h-full border border-slate-700 rounded-lg p-6 bg-slate-900/60 hover:border-orange-500 hover:bg-slate-900/80 transition-colors flex flex-col justify-between"
+              className="group h-full border border-slate-800/40 rounded-xl p-6 bg-slate-950/20 backdrop-blur-md hover:border-orange-500/50 hover:bg-slate-950/30 transition-all flex flex-col justify-between"
             >
               <div className="space-y-3">
                 <div className="inline-flex items-center gap-2 text-orange-500 text-sm">
-                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-slate-950/80">
+                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-slate-900/40 border border-slate-700/30">
                     ⌘
                   </span>
                   <span className="text-xs font-medium uppercase tracking-wide">
